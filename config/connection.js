@@ -1,7 +1,6 @@
 //mysql dependency
-const sql = require('mysql');
+const mysql = require('mysql');
 
-const mysql = sql();
 
 //connection to link to mysql workbench
 const connection = mysql.createConnection({
