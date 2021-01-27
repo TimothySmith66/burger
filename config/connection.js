@@ -17,6 +17,8 @@ const connection = mysql.createConnection({
     // Name of database
     database: 'burger_db',
   });
+
+  let connection;
   //create a connection 
   connection.connect((err) => {
     if (err) throw err;
