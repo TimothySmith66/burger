@@ -22,6 +22,19 @@ const connection = mysql.createConnection({
     if (err) throw err;
     console.log('connected as id ' + connection.threadId);
     connection.end();
+
   });
+  if(process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+  
+  } else {
+    connection = mysql.createConnection({
+      host: 'localhost',
+      user: 'root',
+      password: 'whatitDo2You',
+      database: 'burger_db'
+    });
+  }
+
 //export this connection to other files
   module.exports = connection;
